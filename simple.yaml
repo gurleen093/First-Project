@@ -1,0 +1,23 @@
+name: A simple workflow
+
+on: push
+
+jobs:
+ job1:
+  name: first job
+  runs-on: ununtu-latest
+  steps:
+  - name: step one
+    uses: actions/checkout@v4
+  - name: step two
+    run: ls-la
+  - run: pwd
+job2:
+ name: second job to run
+ runs-on: windows latest
+ steps:
+  -name: Step one of job2
+   uses: actions/checkout@v4
+  -name: step two of job2
+   run: pwd
+    
